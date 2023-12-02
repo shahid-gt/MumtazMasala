@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include '_headerscript.html' %}
+  </head>
+  <body class="hold-transition login-page">
+	<div class="login-logo">
+		<a href="javascript:void(0);"><b><img src="{{ web.themepath }}/assets/img/logo.png" title="{{ web.company }}" /></b></a>
+	</div><!-- /.login-logo -->
+    <div class="login-box">
+      <div id="login" class="login-box-body"{% if web.hide == 'login' %} style="display:none;"{% endif %}>
+        {% if web.err != '' and web.hide == 'forgetpassword' %}
+			<div class="alert alert-danger">{{ web.err }}</div>
+		{% endif %}
+        <p class="login-box-msg">Sign in to start your session</p>
+        <form name="frmlogin" id="frmlogin" action="" method="post">
+          <input type="hidden" name="task" id="task" value="login" />
+		  <div class="form-group has-feedback">
+            <input type="email" class="form-control" required placeholder="Username" name="email" id="email" />
+            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+          </div>
+          <div class="form-group has-feedback">
+            <input type="password" class="form-control" required placeholder="Password" name="pwd" id="pwd" />
+            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+          </div>
+          <div class="row">
+            <div class="col-xs-4 col-xs-offset-8">
+              <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+            </div><!-- /.col -->
+          </div>
+        </form>
+        <a href="javascript:forgetpassword();">I forgot my password</a><br>
+      </div><!-- /.login-box-body -->
+      <div id="forgetpassword" class="login-box-body"{% if web.hide == 'forgetpassword' %} style="display:none;"{% endif %}>
+        {% if web.err != '' and web.hide == 'login' %}
+			<div class="alert alert-danger">{{ web.err }}</div>
+		{% endif %}
+        {% if web.msg != '' and web.hide == 'login' %}
+			<div class="alert alert-success">{{ web.msg }}</div>
+		{% endif %}
+        <p class="login-box-msg">Enter email address to reset password</p>
+        <form name="frmforget" id="frmforget" action="" method="post">
+          <input type="hidden" name="task" id="task" value="forgetpassword" />
+		  <div class="form-group has-feedback">
+            <input type="email" class="form-control" required placeholder="Email" name="email" id="forgetemail" />
+            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+          </div>
+          <div class="row">
+            <div class="col-xs-4 col-xs-offset-8">
+              <button type="submit" class="btn btn-primary btn-block btn-flat">Send Email</button>
+            </div><!-- /.col -->
+          </div>
+        </form>
+        <a href="javascript:login();">Sign In</a><br>
+      </div><!-- /.login-box-body -->
+    </div><!-- /.login-box -->
+	{% include '_footerscript.html' %}
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#frmlogin, #frmforget').bootstrapValidator();
+		});
+		function forgetpassword()
+		{
+			$('#login').slideUp().fadeOut();
+			$('#forgetpassword').slideDown().fadeIn();
+		}
+		function login()
+		{
+			$('#forgetpassword').slideUp().fadeOut();
+			$('#login').slideDown().fadeIn();
+		}
+	</script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+		<div class="box box-{{ web.skin }}">
+			<div class="box-header with-border">
+				<div class="col-lg-3 col-sm-6">
+					<h3 class="block_title">Month :</h3>
+					<div class="btn-group">
+						<select id="month" name="month" class="form-control" onchange="this.form.submit();">
+							{% for key, title in web.months %}
+								<option value="{{ key }}"{% if key == web.month %} selected="selected"{% endif %}>{{ title }}</option>
+							{% endfor %}
+						</select>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<h3 class="block_title">Year :</h3>
+					<div class="btn-group">
+						<select id="year" name="year" class="form-control" onchange="this.form.submit();">
+							{% for key, title in web.years %}
+								<option value="{{ key }}"{% if key == web.year %} selected="selected"{% endif %}>{{ title }}</option>
+							{% endfor %}
+						</select>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<h3 class="block_title">User :</h3>
+					<div class="btn-group">
+						<select id="user_id" name="user_id" class="form-control" onchange="this.form.submit();">
+							<option value="">Select User</option>
+							{{ web.users|raw }}
+						</select>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="btn-group">
+						<button name="btn" id="btn" class="btn btn-success" onclick="downloadfolder();">Download Folder</button>
+					</div>
+				</div>
+				<div style="clear:both;"></div>
+			</div> 
+		</div> 

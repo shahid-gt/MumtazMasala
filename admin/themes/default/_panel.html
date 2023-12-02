@@ -1,0 +1,53 @@
+		<div class="box box-{{ web.skin }}">
+			<div class="box-header with-border">
+				<div class="col-lg-3 col-sm-6">
+					<h3 class="block_title">Search By :</h3>
+					<div class="btn-group">
+						<select id="searchby" name="sb" class="form-control">
+							{% for key, title in web.search %}
+								<option value="{{ key }}"{% if key == web.sb %} selected="selected"{% endif %}>{{ title }}</option>
+							{% endfor %}
+						</select>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<h3 class="block_title">Search For :</h3>
+					<div class="input-group">
+					  <input type="text" class="form-control" id="searchfor" placeholder="Enter Your Keywords" name="sk" value="{{ web.sk }}" />
+					  <span class="input-group-btn">
+						<button class="btn btn-primary btn-sm btn-search" type="submit">GO</button>
+					  </span>
+					</div>
+				</div>
+				<div class="col-lg-2 visible-lg"></div>
+				<div class="col-lg-2 col-sm-6">
+					<div class="">
+						<h3 class="block_title">Page Entry :</h3>
+						<div class="block_part3_right">
+							<div class="btn-group">
+								<select id="en" class="form-control" name="en" onchange="this.form.submit();">
+									<option value="10"{% if web.en == 10 %} selected="selected"{% endif %}>10</option>
+									<option value="25"{% if web.en == 25 %} selected="selected"{% endif %}>25</option>
+									<option value="50"{% if web.en == 50 %} selected="selected"{% endif %}>50</option>
+									<option value="100"{% if web.en == 100 %} selected="selected"{% endif %}>100</option>
+									<option value="0"{% if web.en == 0 %} selected="selected"{% endif %}>All</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-2 col-sm-6">
+					<div class="">
+						<h3 class="block_title">Page :</h3>
+						<div class="btn-group">
+							<select id="pg" class="form-control" name="pg" onchange="this.form.submit();">
+								{% for i in 1..web.total_pages %}
+									<option value={{ i }}{% if i == web.pg %} selected="selected"{% endif %}>{{ i }}</option>
+								{% endfor %}
+							</select>
+						</div>
+					</div>
+				</div> 
+				<div style="clear:both;"></div>
+			</div> 
+		</div> 

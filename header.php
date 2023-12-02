@@ -116,15 +116,13 @@
                   <li class="level0 nav-3 level-top"><a href="abouts.php" class="level-top"><span>About Us</span></a></li>
                   <li class="level0 nav-1 first level-top parent"><a class="level-top"><span>Our Products</span></a>
                         <ul class="level0">
-                                <?php
-                                $sql = "SELECT * FROM ".$app->getPrefix()."categories";
-                                $cats = $app->getList($sql);
-                                foreach( $cats as $cat ):
-                                ?>
-                                <li class="level1 nav-1-1 first"><a href="<?php echo $web['host'].$cat['slug']; ?>"><span><?php echo $cat['title']; ?> </span></a></li>
-                                <?php
-                                endforeach;
-                                ?>
+                                <li class="level1 nav-1-1 first"><a href="vegeterian-verieties.php"><span>Vegetarian Varieties </span></a></li>
+                <li class="level1 nav-1-2"><a href="nonveg-varieties.php"><span>Non vegetarian Varieties </span></a> </li>
+                <li class="level1 nav-1-3 last"><a href="box falooda-varieties.php"><span>Box Falooda Varieties </span></a></li>
+                <li class="level1 nav-1-3 last"><a href="minibox.php"><span>Mini Box </span></a></li>
+                <li class="level1 nav-1-3 last"><a href="floodatag.php"><span>Box Falooda Tag </span></a></li>
+                <li class="level1 nav-1-4 last"><a href="colddrinks-varieties.php"><span>Coldrinks Varieties</span></a></li>
+                <li class="level1 nav-1-5 last"><a href="pouch-packing.php"><span>Pouch Packing </span></a></li>
 
                                
                         </ul>

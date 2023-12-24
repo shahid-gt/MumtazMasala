@@ -12,12 +12,12 @@
                      <div class="breadcrumbs">
                         <ul>
                            <li class=home><a href=# title="Go to Home Page">Products</a> <span>></span>
-                           <li class=category3><a href=#>Mini Box</a>
+                           <li class=category3><a href=#>Coldrinks Varieties</a>
                         </ul>
                      </div>
                      <ul class="row products-grid">
                         <?php
-                        $category = 4;
+                        $category = 6;
                         include("product-details.php");
                         ?>
                      </ul>

@@ -10,8 +10,10 @@
 - [x] refactored the  navigation code and generic product details page.
 
   **_Remaining_**</br>
-  O restructure images once you got from farhan bhai. </br>
-  O  border style changes if required.
+  O  Increase responsivness of the product page.
+  O  Finalize the generic product page.
+  O  Restructuring of directories by importing all the availabe images.
+  O  Clean the product page branch.
 
 
 # Pipeline

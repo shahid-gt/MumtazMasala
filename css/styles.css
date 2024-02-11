@@ -42,9 +42,10 @@ a:hover {
 }
 
 .custom-border {
-    border: 10px solid transparent !important;
-    padding: 15px !important;
-    border-image: url(../images/border-img.png) 30 round !important;
+    border: 25px solid transparent !important;
+    border-image-source: url(../images/Border2.png) !important;
+    border-image-slice: 96 84 86 96 !important;
+    border-image-repeat: round;
 }
 
 .my-product {
@@ -71,6 +72,15 @@ a:hover {
 .zoom-card:hover img {
     transform: scale(1.1);
 
+}
+
+.weight-title {
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+    border: 3px solid black;
+    border-radius: 30px;
+    background-color: #e6e6e6;
 }
 
 a:hover {

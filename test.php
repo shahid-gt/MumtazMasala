@@ -1,39 +1,40 @@
 <?php include("header.php") ?>
 <div class="card" style="width: 18rem;">
-    <img src="https://www.kasandbox.org/programming-images/avatars/leaf-blue.png" class="card-img-top" alt="..."
-        href="https://www.kasandbox.org/programming-images/">
-    <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-            content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
+  <img src="https://www.kasandbox.org/programming-images/avatars/leaf-blue.png" class="card-img-top" alt="..."
+    href="https://www.kasandbox.org/programming-images/">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+      content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
 </div>
 
 <div class="container-fluid" style="background-color:#e6e6e6;">
-    <div class="container">
-        <div class="row">
+  <div class="container">
+    <div class="row">
 
-            <?php
-            // Basic for loop to print numbers 1 to 5
-            for ($i = 1; $i <= 7; $i++) { ?>
-                <div class="col-lg-3 col-md-4 col-sm-12 p-3">
-                    <div class="card custom-border">
-                        <p><span class="badge rounded-pill bg-success"
+      <?php
+      // Basic for loop to print numbers 1 to 5
+      for ($i = 1; $i <= 7; $i++) { ?>
+        <div class="col-lg-3 col-md-4 col-sm-12 p-5">
+          <div class="card custom-border">
+            <!-- <p><span class="badge rounded-pill bg-success"
                                 style="width:100px;text-align:center;font-size:13px;">HALAL</span>
-                        </p>
-                        <img src="images/test3fish.png" class="card-img-top zoom-card p-5" alt="..."
-                            href="https://www.kasandbox.org/programming-images/">
-                        <div class="card-body">
-                            <h1 class="text-center mt-4"><span class="badge rounded-pill bg-primary">Fish Masala</span></h1>
-                        </div>
-                    </div>
-                    <!-- <?php echo $i . "Hello "; ?> -->
-                </div>
-            <?php } ?>
+                        </p> -->
+            <img src="images/test3fish.png" class="card-img-top zoom-card p-5" alt="..."
+              href="https://www.kasandbox.org/programming-images/">
+            <div class="card-body">
+              <h1 class="text-center mt-4"><span class="badge rounded-pill bg-primary">Fish Masala</span></h1>
+            </div>
+            <p class="weight-title">50 gm | Packet</p>
+          </div>
+          <!-- <?php echo $i . "Hello "; ?> -->
         </div>
-
+      <?php } ?>
     </div>
+
+  </div>
 </div>
 
 <!-- <section style="background-color: #eee;">

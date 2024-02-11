@@ -11,8 +11,11 @@
 
   **_Remaining_**</br>
   O  Increase responsivness of the product page.
+
   O  Finalize the generic product page.
+  
   O  Restructuring of directories by importing all the availabe images.
+  
   O  Clean the product page branch.
 
 

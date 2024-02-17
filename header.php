@@ -1,4 +1,4 @@
-<?php require_once('config.php');?>
+<?php require_once('config.php'); ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
         <head>
@@ -120,15 +120,14 @@
                   <li class="level0 nav-3 level-top"><a href="abouts.php" class="level-top"><span>About Us</span></a></li>
                   <li class="level0 nav-1 first level-top parent"><a class="level-top"><span>Our Products</span></a>
                         <ul class="level0">
-                                <li class="level1 nav-1-1 first"><a href="veg.php"><span>Vegetarian Varieties </span></a></li>
-                <li class="level1 nav-1-2"><a href="nonveg.php"><span>Non vegetarian Varieties </span></a> </li>
-                <li class="level1 nav-1-3 last"><a href="falooda.php"><span>Box Falooda Varieties </span></a></li>
-                <li class="level1 nav-1-3 last"><a href="minibox.php"><span>Mini Box </span></a></li>
-                <li class="level1 nav-1-3 last"><a href="faloodatag.php"><span>Box Falooda Tag </span></a></li>
-                <li class="level1 nav-1-4 last"><a href="colddrinks.php"><span>Coldrinks Varieties</span></a></li>
-                <li class="level1 nav-1-5 last"><a href="pouchpacking.php"><span>Pouch Packing </span></a></li>
-
-                               
+                      <?php
+                      $page = $routeParts[1];
+                      $catsSql = "SELECT * FROM " . $app->getPrefix() . "categories";
+                      $categories = $app->getList($catsSql);
+                      foreach ($categories as $category):
+                              ?>
+                                <li class="level1 nav-1-2"><a href="<?php echo $category['page_name'] ?>"><span><?php echo $category['title'] ?> </span></a> </li>              
+                      <?php endforeach; ?>
                         </ul>
                   </li>
                   <li class="level0 nav-4 level-top"><a href="inquiry.php" class="level-top"><span>Inquiry</span></a></li>
@@ -141,14 +140,14 @@
             <li class="level0 nav-3 level-top"><a href="abouts.php" class="level-top"><span>About Us</span></a></li>
             <li class="level0 nav-1 first level-top parent"><a class="level-top"><span>Our Products</span></a>
                       <ul class="level0">
-                <li class="level1 nav-1-1 first"><a href="vegeterian-verieties.php"><span>Vegetarian Varieties </span></a></li>
-                <li class="level1 nav-1-2"><a href="nonveg-varieties.php"><span>Non vegetarian Varieties </span></a> </li>
-                <li class="level1 nav-1-3 last"><a href="box falooda-varieties.php"><span>Box Falooda Varieties </span></a></li>
-                <li class="level1 nav-1-3 last"><a href="minibox.php"><span>Mini Box </span></a></li>
-                <li class="level1 nav-1-3 last"><a href="floodatag.php"><span>Box Falooda Tag </span></a></li>
-                <li class="level1 nav-1-4 last"><a href="colddrinks-varieties.php"><span>Coldrinks Varieties</span></a></li>
-                <li class="level1 nav-1-5 last"><a href="pouch-packing.php"><span>Pouch Packing </span></a></li>
-                <!-- <li class="level1 nav-1-6 last"><a href="#"><span>500g. Jaar Packing</span></a></li>-->
+                      <?php
+                      $page = $routeParts[1];
+                      $catsSql = "SELECT * FROM " . $app->getPrefix() . "categories";
+                      $categories = $app->getList($catsSql);
+                      foreach ($categories as $category):
+                              ?>
+                                <li class="level1 nav-1-2"><a href="<?php echo $category['page_name'] ?>"><span><?php echo $category['title'] ?> </span></a> </li>              
+                      <?php endforeach; ?>
               </ul>
                     </li>
             <li class="level0 nav-4 level-top"><a href="inquiry.php" class="level-top"><span>Inquiry</span></a></li>

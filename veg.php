@@ -1,32 +1,27 @@
 <?php include("header.php"); ?>
-<div class="col1-layout main-container">
-   <div class="container">
-      <div class="row">
-         <div class="col-xs-12">
-            <div class="main">
-               <div class="col-main">
-                  <div class="padding-s">
-                     <div class="std">
-                        <div class="clear"></div>
-                     </div>
-                     <div class="breadcrumbs">
-                        <ul>
-                           <li class=home><a href=# title="Go to Home Page">Products</a> <span>></span>
-                           <li class=category3><a href=#>Vegeterian Varieties</a>
-                        </ul>
-                     </div>
-                     <ul class="row products-grid">
-                        <?php
-                        $category = 1;
-                        include("product-details.php");
-                        ?>
-                     </ul>
-                     <!-- Additional HTML/JS code for product grid goes here -->
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
+<?php
+
+// Get the requested URL path
+$urlPath = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+// Remove leading and trailing slashes, and explode the path
+$route = trim($urlPath, '/');
+$routeParts = explode('/', $route);
+$page = $routeParts[1];
+$catSql = "SELECT * FROM " . $app->getPrefix() . "categories WHERE page_name='$page'";
+$cat = $app->getList($catSql);
+?>
+<div class="p-5">
+   <div class="breadcrumbs">
+      <ul>
+         <li><a href="index.php" title="Go to Home Page">Products</a> <span>></span>
+         <li>
+            <?php echo $cat[0]['title'] ?>
+         </li>
+      </ul>
    </div>
+   <?php
+   include("product-details.php");
+   ?>
 </div>
-<?php include("footer.php"); ?>
+
+<?php require('foooter.php'); ?>

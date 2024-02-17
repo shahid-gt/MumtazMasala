@@ -13,21 +13,19 @@
 <div class="container-fluid" style="background-color:#e6e6e6;">
   <div class="container">
     <div class="row">
-
       <?php
       // Basic for loop to print numbers 1 to 5
       for ($i = 1; $i <= 7; $i++) { ?>
-        <div class="col-lg-3 col-md-4 col-sm-12 p-5">
-          <div class="card custom-border">
-            <!-- <p><span class="badge rounded-pill bg-success"
-                                style="width:100px;text-align:center;font-size:13px;">HALAL</span>
-                        </p> -->
-            <img src="images/test3fish.png" class="card-img-top zoom-card p-5" alt="..."
-              href="https://www.kasandbox.org/programming-images/">
+        <div class="col-lg-3 col-md-4 col-sm-6 mt-5">
+          <div class="card product-card">
+            <img src="images/test3fish.png" class="card-img-top product-card-img zoom-card p-5" alt="Sorry! Image Not Found." />
             <div class="card-body">
               <h1 class="text-center mt-4"><span class="badge rounded-pill bg-primary">Fish Masala</span></h1>
             </div>
-            <p class="weight-title">50 gm | Packet</p>
+            <div class="product-description">
+              <span class="badge rounded-pill bg-success"> &#x20B9; 15 </span> <br>
+              <span class="badge rounded-pill bg-success">50 gm | Packet</span>
+            </div>
           </div>
           <!-- <?php echo $i . "Hello "; ?> -->
         </div>

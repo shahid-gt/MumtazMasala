@@ -11,17 +11,18 @@ $catSql = "SELECT * FROM " . $app->getPrefix() . "categories WHERE page_name='$p
 $cat = $app->getList($catSql);
 ?>
 <div class="p-5">
-   <div class="breadcrumbs">
-      <ul>
-         <li><a href="index.php" title="Go to Home Page">Products</a> <span>></span>
-         <li>
-            <?php echo $cat[0]['title'] ?>
-         </li>
-      </ul>
-   </div>
-   <?php
-   include("product-details.php");
-   ?>
+    <div class="breadcrumbs">
+        <ul>
+            <li><a href="index.php" title="Go to Home Page">Products</a> <span>></span>
+            <li>
+                <?php echo $cat[0]['title'] ?>
+            </li>
+        </ul>
+    </div>
+    <?php
+    $category = $cat[0]['id'];
+    include("product-details.php");
+    ?>
 </div>
 
 <?php require('foooter.php'); ?>
